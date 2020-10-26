@@ -11,7 +11,11 @@ for (let i = 0; i < 5; i++) {
   thumbBar.appendChild(newImage);
   newImage.onclick = (e) => {
     //押されたらトップの画像に
-    displayedImage.src = e.target.src;
+    if (i != 2) {
+      displayedImage.src = e.target.src;
+    } else {
+      displayedImage.src = "./images/javascript.jpg";
+    }
   };
 }
 
